@@ -1,7 +1,8 @@
 import pytest
-a = 1
-b = 2
+import requests
 
+x = requests.get('https://google.com')
 
-def test_a():
-    assert a != b
+def test_1():
+    assert x.status_code == 200
+
